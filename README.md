@@ -16,20 +16,35 @@ When a process terminates, oss should log its termination in the log file and al
 For example at least something like..
 
 Master: P2 requesting read of address 25237 at time xxx:xxx
+
 Master: Address 25237 in frame 13, giving data to P2 at time xxx:xxx
+
 Master: P5 requesting write of address 12345 at time xxx:xxx
+
 Master: Address 12345 in frame 203, writing data to frame at time xxx:xxx
+
 Master: P2 requesting write of address 03456 at time xxx:xxx
+
 Master: Address 12345 is not in a frame, pagefault
+
 Master: Clearing frame 107 and swapping in p2 page 3
+
 Master: Dirty bit of frame 107 set, adding additional time to the clock
+
 Master: Indicating to P2 that write has happened to address 03456
+
 Current memory layout at time xxx:xxx is:
-      Occupied DirtyBit timeStamp
+
+.......Occupied  DirtyBit timeStamp
+      
 Frame 0:  No      0     xxxxx
+
 Frame 1:  Yes     1     xxxxx
+
 Frame 2:  Yes     0     xxxxx
+
 Frame 3:  Yes     1     xxxxx
+
 where Occupied indicates if we have a page in that frame, the timeStamp is used for the LRU replacement policy and the dirty bit indicates if the frame has been written to.
 
 ## User Processes
