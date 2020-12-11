@@ -93,7 +93,7 @@ Note: The log.txt file (generated with verbose mode, -v) is submitted along with
 <ul> rm -f oss user </ul>
 This command is used to remove oss and user executable files. If log file and other generated files needs to be removed the same 'rm' command with file names can be used.
 
-##Note:
+## Note:
 The random scheme generates between 0.55-0.60 page faults per reference, which leads to half of the pages being evicted.
 
 The weights scheme generates almost no page faults - 0.01.
