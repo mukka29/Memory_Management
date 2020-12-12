@@ -116,7 +116,5 @@ From 62K references I got only 214 page faults.
 and after looking at the log for generated addresses, I saw process address is growing, simillarly to the weights of the virtual pages. This leads to hiting the same last frame, at some point, which leads to no evictions/page faults.
 
 ### Updated project info can always be found at
-* [My Project](https://github.com/mukka29/Operating-Systems)
-
-
+* [My Project](https://github.com/mukka29/Memory_Management.git)
 
